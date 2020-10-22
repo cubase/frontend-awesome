@@ -1,0 +1,19 @@
+{
+  "name": "@frontend-architecture/hooks",
+  "version": "0.0.1-alpha01",
+  "description": "",
+  "main": "./dist/bundle.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "prepublish": "cp ../_types/hooks/src/*.d.ts ./dist/",
+    "release": "npm run prepublish && npm publish --access public"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.isequal": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/lodash.isequal": "^4.5.5"
+  }
+}

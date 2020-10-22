@@ -1,0 +1,17 @@
+{
+  "name": "@frontend-architecture/context",
+  "version": "0.0.1-alpha03",
+  "description": "",
+  "main": "./dist/bundle.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "prepublish": "cp ../_types/context/src/*.d.ts ./dist/",
+    "release": "npm run prepublish && npm publish --access public"
+  },
+  "author": "cubase",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

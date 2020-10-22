@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "downlevelIteration": true,
+    "declaration": true,
+    "jsx": "react",
+    "outDir": "./packages/_types",
+    "baseUrl": "./packages"
+  },
+  "include": ["./packages/**/*.tsx", "./packages/**/*.ts"],
+  "exclude": ["node_modules", "./packages/**/dist", "./packages/_types"]
+}

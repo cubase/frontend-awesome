@@ -1,13 +1,9 @@
 import { useEffect, useRef } from 'react'
 import isEqual from 'lodash.isequal'
 
-export type useObserverOptions<T> = {
-  observe: T
-  action: (currentValue: T, previousValue: T) => void
-  dependable?: boolean
-}
+import { ObserverOptions } from './types'
 
-const useObserver = <T>(options: useObserverOptions<T>) => {
+const useObserver = <T>(options: ObserverOptions<T>) => {
   const { observe, action, dependable } = options
   const previous = useRef(observe)
 
@@ -18,7 +14,7 @@ const useObserver = <T>(options: useObserverOptions<T>) => {
       }
       previous.current = observe
     }
-  }, [observe])
+  })
 }
 
-export { useObserver }
+export default useObserver

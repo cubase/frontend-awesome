@@ -3,7 +3,6 @@ const TerserPlugin = require('terser-webpack-plugin')
 
 const generateWebpackBase = ({ tsLoaderOptions } = {}) => ({
   mode: 'production',
-  target: 'web',
   module: {
     rules: [
       {

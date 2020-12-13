@@ -7,10 +7,16 @@ module.exports = merge(generateWebpackBase(), {
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    libraryTarget: 'umd'
   },
   externals: {
-    react: 'React'
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react'
+    }
   },
   plugins: [
     new CopyWebpackPlugin({

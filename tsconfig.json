@@ -4,7 +4,6 @@
     "module": "esnext",
     "noImplicitAny": true,
     "removeComments": true,
-    "sourceMap": true,
     "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
@@ -14,7 +13,8 @@
     "declaration": true,
     "jsx": "react",
     "outDir": "./packages/_types",
-    "baseUrl": "./packages"
+    "baseUrl": "./packages",
+    "inlineSourceMap": true
   },
   "include": ["./packages/**/*.tsx", "./packages/**/*.ts"],
   "exclude": ["node_modules", "./packages/**/dist", "./packages/_types"]

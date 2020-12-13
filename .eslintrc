@@ -1,6 +1,9 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "prettier", "react-hooks", "@typescript-eslint"],
+  "plugins": ["react", "prettier", "react-hooks", "@typescript-eslint", "jest"],
+  "env": {
+    "jest/globals": true
+  },
   "globals": {
     "console": true,
     "window": true,

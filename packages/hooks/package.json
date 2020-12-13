@@ -1,12 +1,11 @@
 {
   "name": "@frontend-architecture/hooks",
-  "version": "0.0.1-alpha01",
+  "version": "0.0.1-alpha02",
   "description": "",
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "prepublish": "cp ../_types/hooks/src/*.d.ts ./dist/",
-    "release": "npm run prepublish && npm publish --access public"
+    "release": "npm publish --access public"
   },
   "author": "",
   "license": "ISC",

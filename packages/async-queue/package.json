@@ -1,0 +1,15 @@
+{
+  "name": "@frontend-architecture/async-queue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "cp ../_types/async-queue/src/*.d.ts ./dist/",
+    "release": "npm run prepublish && npm publish --access public"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eventemitter3": "^4.0.7"
+  }
+}

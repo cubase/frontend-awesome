@@ -13,10 +13,10 @@
     "downlevelIteration": true,
     "declaration": true,
     "jsx": "react",
-    "outDir": "./packages/_types",
-    "baseUrl": "./packages",
+    "outDir": "./dist/_types",
+    "baseUrl": "./src",
     "inlineSourceMap": true
   },
-  "include": ["./packages/**/*.tsx", "./packages/**/*.ts"],
-  "exclude": ["**/node_modules/**", "./packages/**/dist", "./packages/_types"]
+  "include": ["./src/**/*.tsx", "./src/**/*.ts"],
+  "exclude": ["**/node_modules/**", "./dist"]
 }

@@ -1,24 +1,19 @@
 
-<img src="https://user-images.githubusercontent.com/29258951/96114364-cd52fe00-0ee5-11eb-8244-95b3275a1c6a.png" width="350" />
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/29258951/103455708-70e6ca00-4cef-11eb-9839-cf9e404ed79d.png" width="350" />
+</p>
 
 # About
-Frontend Architecture represents a collection of tools that enable develop scalable front-end applications in layer-based architecture.
+Frontend Awesome represents a collection of tools that enable develop scalable front-end applications in layer-based architecture.
 
-# DX
-## ESLint + Prettier
-Use configuration from `.eslintrc` and `.prettierrc`.
-
-### Install required dependencies:
+## FA - React Boilerplate
+Create boilerplate with TypeScript and Webpack (ESLint and Prettier configuration including) using command:
 ```
-yarn add -D eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise eslint-plugin-standard prettier
+npx @frontend-awesome/react-boilerplate
 ```
 
-### For **React** based project install also:
+## FA - Context
+Implements blazing simple solution for managing global states.
 ```
-yarn add -D eslint-plugin-react eslint-plugin-react-hooks 
-```
-
-### For **TypeScript** based project install also:
-```
-yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
+yarn add @frontend-awesome/context
 ```

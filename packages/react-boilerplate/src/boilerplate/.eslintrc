@@ -1,0 +1,63 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "prettier", "react-hooks", "@typescript-eslint", "jest"],
+  "env": {
+    "jest/globals": true
+  },
+  "globals": {
+    "console": true,
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "setTimeout": true,
+    "FormData": true,
+    "require": true,
+    "module": true,
+    "__dirname": true,
+    "process": true,
+    "exports": true,
+    "Promise": true,
+    "Array": true,
+    "global": true,
+    "Map": true
+  },
+  "rules": {
+    "no-console": 0,
+    "no-unused-vars": 1,
+    "no-use-before-define": "off",
+    "semi": ["error", "never"],
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-useless-constructor": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/camelcase": "off",
+    "import/no-duplicates": "off",
+    "object-curly-spacing": ["error", "always"],
+    "allowMultiplePropertiesPerLine": 0,
+    "prettier/prettier": ["error"],
+    "react/display-name": 0,
+    "no-mixed-spaces-and-tabs": 2,
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "noSortAlphabetically": false,
+        "ignoreCase": false,
+        "callbacksLast": true,
+        "shorthandLast": false,
+        "reservedFirst": true
+      }
+    ]
+  },
+  "extends": [
+    "standard",
+    "prettier",
+    "prettier/react",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended"
+  ]
+}

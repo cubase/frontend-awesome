@@ -1,0 +1,22 @@
+{
+  "name": "@frontend-awesome/react-boilerplate",
+  "version": "0.0.1-alpha03",
+  "main": "index.js",
+  "author": "cubase",
+  "license": "MIT",
+  "bin": {
+    "react-boilerplate": "./src/index.js"
+  },
+  "scripts": {
+    "tar-boilerplate": "cd ./src/boilerplate && tar -cvf ../boilerplate.tar --exclude=node_modules *",
+    "release": "npm run tar-boilerplate && npm publish --access public"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.2.0",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.3",
+    "tar-fs": "^2.1.1",
+    "validate-npm-package-name": "^3.0.0"
+  }
+}

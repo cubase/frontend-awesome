@@ -100,7 +100,7 @@ const run = () => {
       {
         type: 'confirm',
         name: 'useCWD',
-        message: `Use current directory? (${process.cwd()}/<YOUR_PROJECT_NAME>)`,
+        message: (answers) => `Use current directory? (${path.join(process.cwd(), answers.name)})`,
         default: true
       },
       {

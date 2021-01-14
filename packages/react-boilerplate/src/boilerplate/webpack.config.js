@@ -21,7 +21,15 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         loader: 'ts-loader',
         exclude: /node_modules/
-      }
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+          },
+        ],
+      },
     ]
   },
   resolve: {

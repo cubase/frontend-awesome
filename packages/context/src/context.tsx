@@ -1,16 +1,7 @@
 import React from 'react'
 import { CustomError } from 'utils/customError'
 
-export interface ContextProviderProps {
-  children: React.ReactNode
-}
-
-export interface ReducerAction {
-  type: string
-  payload?: any
-}
-
-export type Reducer<State, Action> = (state: State, action: Action) => State
+import { ContextProviderProps, Reducer, ReducerAction } from './types'
 
 const createContext = <ContextInitialState, ContextAction extends ReducerAction>(
   initialState: ContextInitialState,

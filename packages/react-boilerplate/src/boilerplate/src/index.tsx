@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { AppContainer } from './containers'
+import { normalize } from 'core/styleguide/normalize'
+import { AppContainer } from 'containers'
 
-// -- global .css init
+// -- global css init
+normalize()
 
 // -- service worker install
 

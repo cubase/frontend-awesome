@@ -1,3 +1,4 @@
 /src
 *.LICENSE.txt
+tsconfig.json
 webpack.config.js

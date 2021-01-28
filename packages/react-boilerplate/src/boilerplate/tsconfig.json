@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "module": "esnext",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "removeComments": true,
     "allowJs": true,
     "moduleResolution": "node",

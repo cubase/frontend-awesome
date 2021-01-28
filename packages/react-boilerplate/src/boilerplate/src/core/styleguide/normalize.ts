@@ -7,7 +7,7 @@ const normalize = () => injectGlobal`
         box-sizing: 'border-box';
     }
     html {
-        font-size: 12px;
+        font-size: 16px;
     }
     body {
         font-family: 'sans-serif'

@@ -1,30 +1,31 @@
 import React from 'react'
 
-import { Logo } from 'components'
+import { lasagna, ServiceProps } from './lasagna'
+import { appService } from './app.service'
 
-const AppContainer = () => {
+const AppContainer = ({ service }) => {
+  const { models, operations, dispatch } = service as ServiceProps
+  const { todos } = models
+
   return (
     <div
       style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        marginTop: '5rem'
+        padding: '2rem'
       }}
     >
-      <Logo />
-      <p
-        style={{
-          color: '#e6e6e6',
-          letterSpacing: '-2px',
-          margin: '3rem 0',
-          fontSize: '3rem'
-        }}
-      >
-        Excited to build some interesting stuff!
-      </p>
+      <h1>Todo</h1>
+      <ul>
+        {todos.map((todo) => (
+          <li key={todo.name} onClick={() => dispatch(operations.RENAME_TODO, todo.name)}>
+            {todo.name}
+          </li>
+        ))}
+      </ul>
+      <button onClick={() => dispatch(operations.ADD_TODO, { name: `bazerant-${Date.now()}` })}>
+        Pridat todo
+      </button>
     </div>
   )
 }
 
-export { AppContainer }
+export default lasagna(AppContainer, appService)

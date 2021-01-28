@@ -1,4 +1,4 @@
-import { StyleguideContext } from './context.types'
+import { StyleguideContext } from './styleguide.types'
 
 export type SwitchThemeAction = {
   type: 'styleguide/switch-theme'

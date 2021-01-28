@@ -1,6 +1,6 @@
 import { css, keyframes } from '@emotion/css'
 
-import { StyleguideContextFunction } from 'core/styleguide/context.types'
+import { StyleguideContextFunction } from 'core/styleguide/styleguide.types'
 
 const pulse = keyframes`
   0% {

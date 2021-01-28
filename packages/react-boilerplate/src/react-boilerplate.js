@@ -16,9 +16,9 @@ const validateProjectName = (appName) => {
         )} because of npm naming restrictions:\n`
       )
     )
-    ;[...(validationResult.errors || []), ...(validationResult.warnings || [])].forEach((error) => {
-      console.error(chalk.red(`  * ${error}`))
-    })
+      ;[...(validationResult.errors || []), ...(validationResult.warnings || [])].forEach((error) => {
+        console.error(chalk.red(`  * ${error}`))
+      })
     console.error(chalk.red('\nPlease choose a different project name.'))
     return false
   }
@@ -114,10 +114,7 @@ const run = () => {
     .then(async (answers) => {
       // Setup project phase
       const projectName = answers.name
-      const projectDirectory = path.resolve(
-        answers.useCWD ? process.cwd() : answers.customPath,
-        projectName
-      )
+      const projectDirectory = answers.useCWD ? path.resolve(process.cwd(), projectName) : path.resolve(answers.customPath)
 
       // 1. Ensure project directory
       console.log(chalk.yellow('» Initializing project directory...'))

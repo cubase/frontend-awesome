@@ -1,6 +1,5 @@
-type StyleguideTheme = {
+export type StyleguideTheme = {
   colors: Record<string, string>
-  backgrounds: Record<string, string>
 }
 
 export type StyleguideContext = {

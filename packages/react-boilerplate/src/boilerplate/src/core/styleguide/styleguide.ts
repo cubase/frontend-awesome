@@ -1,7 +1,7 @@
 import { createContext, Reducer } from '@frontend-awesome/context'
 import styleguideConfig from './styleguide.config.json'
 
-import { StyleguideContext, StyleguideContextFunction } from './context.types'
+import { StyleguideContext, StyleguideContextFunction } from './styleguide.types'
 import { StyleguideGenericAction } from './actions.types'
 
 type StyleguideConfigurationTheme = keyof typeof styleguideConfig.themes

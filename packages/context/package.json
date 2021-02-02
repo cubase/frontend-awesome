@@ -5,7 +5,8 @@
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "release": "npm publish --access public"
+    "build": "../../node_modules/.bin/webpack --mode=production",
+    "release": "npm run build && npm publish --access public"
   },
   "author": "cubase",
   "license": "ISC",

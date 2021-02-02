@@ -1,11 +1,12 @@
 {
   "name": "@frontend-awesome/hooks",
-  "version": "0.0.1-alpha02",
+  "version": "0.0.1-alpha04",
   "description": "",
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "release": "npm publish --access public"
+    "build": "../../node_modules/.bin/webpack --mode=production",
+    "release": "npm run build && npm publish --access public"
   },
   "author": "",
   "license": "ISC",

@@ -1,3 +1,3 @@
 export * from './types'
 export * from './createAbortableFetch'
-export { default as createUseFetch } from './createUseFetch'
+export { createUseFetch } from './createUseFetch'

@@ -4,17 +4,22 @@ import isEqual from 'lodash.isequal'
 import { ObserverOptions } from './types'
 
 const useObserver = <T>(options: ObserverOptions<T>) => {
-  const { observe, action, dependable } = options
-  const previous = useRef(observe)
+  const { observe: currentValue, action, dependable } = options
+  const previous = useRef(currentValue)
+  const callback = useRef(action)
+
+  useEffect(() => {
+    callback.current = action
+  })
 
   useEffect(() => {
     if (dependable || dependable === undefined) {
-      if (!isEqual(previous.current, observe)) {
-        action(observe, previous.current)
+      if (!isEqual(previous.current, currentValue)) {
+        callback.current(currentValue, previous.current)
       }
-      previous.current = observe
+      previous.current = currentValue
     }
   })
 }
 
-export default useObserver
+export { useObserver }

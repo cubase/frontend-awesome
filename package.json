@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "test": "jest",
-    "build:context": "rm -rf ./packages/_types/context && rm -rf ./packages/context/dist && npx webpack --config ./packages/context/webpack.config.js",
-    "build:hooks": "rm -rf ./packages/_types/hooks && rm -rf ./packages/hooks/dist && npx webpack --config ./packages/hooks/webpack.config.js"
+    "build:context": "rm -rf ./packages/context/dist && npx webpack --config ./packages/context/webpack.config.js",
+    "build:hooks": "rm -rf ./packages/hooks/dist && npx webpack --config ./packages/hooks/webpack.config.js"
   },
   "author": "cubase",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
+    "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.2.1",
     "declaration-bundler-webpack-plugin": "^1.0.3",
     "eslint": "^7.9.0",

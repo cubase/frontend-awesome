@@ -11,9 +11,7 @@
     "alwaysStrict": true,
     "strictNullChecks": true,
     "downlevelIteration": true,
-    "declaration": true,
     "jsx": "react",
-    "outDir": "./packages/_types",
     "baseUrl": "./packages",
     "inlineSourceMap": true
   },

@@ -1,6 +1,6 @@
 const path = require('path')
 const { merge } = require('webpack-merge')
-const CopyAfterBuildPlugin = require('../../utils/CopyAfterBuildPlugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const generateWebpackBase = require('../../generateWebpackBase')
 
 module.exports = merge(
@@ -25,11 +25,6 @@ module.exports = merge(
         amd: 'react'
       }
     },
-    plugins: [
-      new CopyAfterBuildPlugin({
-        from: path.resolve(__dirname, '../_types/context/src/'),
-        to: path.resolve(__dirname, './dist/')
-      })
-    ]
+    plugins: [new CleanWebpackPlugin()]
   }
 )

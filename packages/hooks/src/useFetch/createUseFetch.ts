@@ -34,8 +34,6 @@ const createUseFetch = (instanceOptions?: RequestInit) => {
           type: 'FETCHING'
         })
 
-        console.log('making request', fetchHookInput)
-
         try {
           const abortableFetch = createAbortableFetch(abortController, instanceOptions)
           const data =
@@ -73,4 +71,4 @@ const createUseFetch = (instanceOptions?: RequestInit) => {
   return useFetch
 }
 
-export default createUseFetch
+export { createUseFetch }

@@ -1,5 +1,4 @@
 import React from 'react'
-import { CustomError } from 'utils/customError'
 
 import { ContextProviderProps, Reducer, ReducerAction } from './types'
 
@@ -23,7 +22,7 @@ const createContext = <ContextInitialState, ContextAction extends ReducerAction>
     const context = React.useContext(Context)
 
     if (context === null) {
-      throw new CustomError('useContext has to be used within ContextProvider')
+      throw new Error('useContext has to be used within ContextProvider')
     }
 
     return context
@@ -33,7 +32,7 @@ const createContext = <ContextInitialState, ContextAction extends ReducerAction>
     const dispatch = React.useContext(DispatchContext)
 
     if (dispatch === null) {
-      throw new CustomError('useDispatch has to be used within ContextProvider')
+      throw new Error('useDispatch has to be used within ContextProvider')
     }
 
     return dispatch

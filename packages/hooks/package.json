@@ -1,6 +1,6 @@
 {
   "name": "@frontend-awesome/hooks",
-  "version": "0.0.1-alpha04",
+  "version": "0.0.1-alpha08",
   "description": "",
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",

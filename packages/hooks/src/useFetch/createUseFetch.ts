@@ -1,13 +1,17 @@
 import { useState, useEffect, useReducer } from 'react'
 
 import { createAbortableFetch } from './createAbortableFetch'
-import { reducer } from './reducer'
+import { createFetchReducer } from './reducer'
 import { FetchHookInput, FetchState, RefetchFunction } from './types'
 
 const createUseFetch = (instanceOptions?: RequestInit) => {
-  const useFetch = (fetchHookInput?: FetchHookInput): [FetchState, RefetchFunction] => {
+  function useFetch<T>(
+    fetchHookInput?: FetchHookInput,
+    defaultValue?: T
+  ): [FetchState<T>, RefetchFunction] {
+    const reducer = createFetchReducer<T>()
     const [state, dispatch] = useReducer(reducer, {
-      data: null,
+      data: (defaultValue || null) as T,
       error: null,
       loading: false
     })

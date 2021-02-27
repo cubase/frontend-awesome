@@ -1,6 +1,6 @@
-import { FetchReducer } from './types'
+import { FetchState, FetchAction } from './types'
 
-const reducer: FetchReducer = (state, action) => {
+const createFetchReducer = <T>() => (state: FetchState<T>, action: FetchAction<T>) => {
   switch (action.type) {
     case 'FETCHING':
       return {
@@ -16,11 +16,11 @@ const reducer: FetchReducer = (state, action) => {
       }
     case 'ERROR':
       return {
-        data: null,
+        ...state,
         error: action.payload,
         loading: false
       }
   }
 }
 
-export { reducer }
+export { createFetchReducer }

@@ -3,18 +3,16 @@ export type FetchError = {
   statusCode: number
 }
 
-export type FetchState = {
-  data: any | null
+export type FetchState<T> = {
+  data: T
   error: FetchError | null
   loading: boolean
 }
 
-export type FetchAction =
+export type FetchAction<T> =
   | { type: 'FETCHING' }
-  | { type: 'FETCHED'; payload: any }
+  | { type: 'FETCHED'; payload: T }
   | { type: 'ERROR'; payload: FetchError }
-
-export type FetchReducer = (state: FetchState, action: FetchAction) => FetchState
 
 export type FetchInput = { url: string } & RequestInit
 

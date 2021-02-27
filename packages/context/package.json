@@ -1,6 +1,6 @@
 {
   "name": "@frontend-awesome/context",
-  "version": "0.0.1-alpha03",
+  "version": "1.0.0",
   "description": "",
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",

@@ -3,6 +3,7 @@ const TSConfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -38,6 +39,9 @@ module.exports = {
     plugins: [new TSConfigPathsPlugin()]
   },
   plugins: [
+    new CleanWebpackPlugin({
+      verbose: true
+    }),
     new CopyWebpackPlugin({
       patterns: [
         { from: './src/public', to: "public", noErrorOnMissing: true }

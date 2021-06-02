@@ -1,12 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { normalize } from 'core/styleguide/normalize'
 import { AppContainer } from 'containers'
-
-// -- global css init
-normalize()
+import { StyleguideProvider } from 'core/styleguide'
 
 // -- service worker install
 
-ReactDOM.render(<AppContainer />, document.getElementById('react-root'))
+const App = () => (
+  <StyleguideProvider>
+    <AppContainer />
+  </StyleguideProvider>
+)
+
+ReactDOM.render(<App />, document.getElementById('react-root'))

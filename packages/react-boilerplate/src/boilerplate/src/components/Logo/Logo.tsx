@@ -1,14 +1,13 @@
 import React from 'react'
 import logo from 'assets/logo.png'
 
-import { useStyles } from 'core/styleguide/styleguide'
-import { logoStyles } from './styles'
+import { useLogoStyles } from './styles'
 
 const Logo = () => {
-  const { classes } = useStyles(logoStyles)
+  const { classes } = useLogoStyles()
   return (
-    <div className={classes.container}>
-      <img className={classes.img} alt="fa-logo" src={logo} />
+    <div className={classes.logo}>
+      <img alt="fa-logo" className={classes.logoImg} src={logo} />
     </div>
   )
 }

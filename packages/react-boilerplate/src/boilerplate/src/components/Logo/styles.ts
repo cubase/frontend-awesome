@@ -1,6 +1,5 @@
 import { css, keyframes } from '@emotion/css'
-
-import { StyleguideContextFunction } from 'core/styleguide/styleguide.types'
+import { createUseStyles } from 'core/styleguide'
 
 const pulse = keyframes`
   0% {
@@ -16,16 +15,15 @@ const pulse = keyframes`
   }
 `
 
-const logoStyles: StyleguideContextFunction = (context) => ({
-  container: css`
-    color: ${context.theme.colors.red100};
+const useLogoStyles = createUseStyles((theme) => ({
+  logo: css`
     height: 150px;
   `,
-  img: css`
+  logoImg: css`
     height: 100%;
     width: auto;
     animation: ${pulse} 2.5s infinite ease-in-out;
   `
-})
+}))
 
-export { logoStyles }
+export { useLogoStyles }

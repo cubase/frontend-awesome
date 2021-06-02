@@ -1,8 +1,10 @@
 import React from 'react'
 
 import { Logo } from 'components'
+import { useGlobalStyles } from 'core/styleguide'
 
 const AppContainer = () => {
+  useGlobalStyles()
   return (
     <div
       style={{

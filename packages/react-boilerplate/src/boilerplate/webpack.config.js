@@ -13,7 +13,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './dist',
+    static: './dist',
     hot: true,
     port: 8000
   },
@@ -28,10 +28,10 @@ module.exports = {
         test: /\.(png|jpg|gif)$/i,
         use: [
           {
-            loader: 'url-loader',
-          },
-        ],
-      },
+            loader: 'url-loader'
+          }
+        ]
+      }
     ]
   },
   resolve: {
@@ -43,13 +43,12 @@ module.exports = {
       verbose: true
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        { from: './src/public', to: "public", noErrorOnMissing: true }
-      ]
+      patterns: [{ from: './src/public', to: 'public', noErrorOnMissing: true }]
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    })],
+    })
+  ],
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin()]

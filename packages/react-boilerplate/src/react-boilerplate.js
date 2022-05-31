@@ -157,9 +157,14 @@ const run = () => {
     })
     .catch((error) => {
       if (error.isTtyError) {
-        console.error(chalk.red("[FA] Prompt couldn't be rendered in the current environment"))
+        console.error(
+          chalk.red("[FrontendAwesome] Prompt couldn't be rendered in the current environment")
+        )
       } else {
-        console.error(chalk.red('[FA] Error occured during creating boilerplate:\n'), error)
+        console.error(
+          chalk.red('[FrontendAwesome] Error occured during creating boilerplate:\n'),
+          error
+        )
       }
     })
 }

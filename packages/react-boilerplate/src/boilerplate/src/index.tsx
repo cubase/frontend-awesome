@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 
 import { AppContainer } from 'containers'
 import { StyleguideProvider } from 'core/styleguide'
@@ -12,4 +12,9 @@ const App = () => (
   </StyleguideProvider>
 )
 
-ReactDOM.render(<App />, document.getElementById('react-root'))
+const container = document.getElementById('react-root')
+
+if (container) {
+  const root = createRoot(container)
+  root.render(<App />)
+}

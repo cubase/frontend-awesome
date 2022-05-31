@@ -8,10 +8,10 @@
     "dev": "webpack serve --mode=development"
   },
   "devDependencies": {
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.10.0",
-    "@typescript-eslint/parser": "^4.10.0",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^7.0.0",
     "eslint": "^7.15.0",
@@ -24,19 +24,19 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-standard": "^5.0.0",
-    "html-webpack-plugin": "^4.5.0",
-    "prettier": "^2.2.1",
-    "ts-loader": "^8.0.13",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.6.2",
+    "ts-loader": "^9.3.0",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
-    "typescript": "^4.4.2",
+    "typescript": "^4.7.2",
     "url-loader": "^4.1.1",
-    "webpack": "^5.11.1",
-    "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.0"
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
-    "@emotion/css": "^11.1.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@emotion/css": "^11.9.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   }
 }
